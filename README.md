@@ -38,6 +38,14 @@ The project involved identifying cloud security risks, evaluating their likeliho
 6. Developed remediation strategies
 7. Documented the final findings
 
+## Sample Risk Finding
+
+| Asset | Threat | Vulnerability | Likelihood | Impact | Risk Score | Recommended Control | Framework |
+|---|---|---|---|---|---|---|---|
+| Local Administrator Account | Credential compromise | No multifactor authentication | 3 | 5 | 15 | Enforce MFA | NIST CSF PR.AC |
+
+**Reasoning:** Likelihood was scored moderate (3/5) since the account is not directly internet-facing, but impact was scored maximum (5/5) because compromise of this account grants full administrative control over the VM. This risk scored higher than several more "obviously exposed" findings, illustrating that impact severity can outweigh raw exposure likelihood when prioritizing remediation.
+
 ## Key Risk Areas
 
 - Identity and access management
