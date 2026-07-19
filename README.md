@@ -61,16 +61,6 @@ The project involved identifying cloud security risks, evaluating their likeliho
 - Disaster recovery
 - Policy and regulatory compliance
 
-## Sample Risk Register Findings
-
-| Risk | Likelihood | Impact | Risk Score | Recommended Control |
-|---|---:|---:|---:|---|
-| Brute-force attack against publicly exposed RDP | 4/5 | 4/5 | 16/25 | Restrict inbound RDP access through the Azure Network Security Group to trusted IP addresses only |
-| Compromise of the privileged local administrator account | 3/5 | 5/5 | 15/25 | Enforce multifactor authentication for all administrative and privileged accounts |
-| Exploitation of unpatched Windows Server vulnerabilities | 3/5 | 4/5 | 12/25 | Implement regular patch management and apply operating-system security updates |
-| Privilege misuse within the Azure subscription | 2/5 | 5/5 | 10/25 | Enforce role-based access control and least-privilege access for Azure resources |
-| Malicious activity remaining undetected due to limited monitoring | 3/5 | 3/5 | 9/25 | Enable centralized logging and security alerts through Azure Monitor or Microsoft Defender for Cloud |
-
 ## Skills Demonstrated
 
 - Cloud security risk analysis
