@@ -38,13 +38,17 @@ The project involved identifying cloud security risks, evaluating their likeliho
 6. Developed remediation strategies
 7. Documented the final findings
 
-## Sample Risk Finding
+## Sample Risk Register Findings
 
-| Asset | Threat | Vulnerability | Likelihood | Impact | Risk Score | Recommended Control | Framework |
-|---|---|---|---|---|---|---|---|
-| Privileged Local Administrator Account | Credential compromise | Multifactor authentication not enabled | 3 | 5 | 15/25 | Enforce MFA for administrative access | NIST CSF 2.0 PR.AA-03 |
+| Risk | Likelihood | Impact | Risk Score | Recommended Control |
+|---|---:|---:|---:|---|
+| Brute-force attack against publicly exposed RDP | 4/5 | 4/5 | 16/25 | Restrict inbound RDP access through the Azure Network Security Group to trusted IP addresses only |
+| Compromise of the privileged local administrator account¹ | 3/5 | 5/5 | 15/25 | Enforce multifactor authentication for all administrative and privileged accounts |
+| Exploitation of unpatched Windows Server vulnerabilities | 3/5 | 4/5 | 12/25 | Implement regular patch management and apply operating-system security updates |
+| Privilege misuse within the Azure subscription | 2/5 | 5/5 | 10/25 | Enforce role-based access control and least-privilege access for Azure resources |
+| Malicious activity remaining undetected due to limited monitoring | 3/5 | 3/5 | 9/25 | Enable centralized logging and security alerts through Azure Monitor or Microsoft Defender for Cloud |
 
-**Reasoning:** Likelihood was scored moderate (3/5) because account compromise would require an attacker to obtain or successfully guess valid administrative credentials, although publicly exposed RDP increases the opportunity for credential-based attacks. Impact was scored maximum (5/5) because compromise of the local administrator account would provide full control over the virtual machine. The resulting score of 15/25 demonstrates how high potential impact can elevate remediation priority even when likelihood is not rated at the maximum level.
+¹ *Likelihood was scored moderate (3/5) because account compromise would require an attacker to obtain or successfully guess valid administrative credentials, although publicly exposed RDP increases the opportunity for credential-based attacks. Impact was scored maximum (5/5) because compromise of this account would provide full control over the virtual machine — illustrating how high potential impact can elevate remediation priority even when likelihood isn't at the maximum level.*
 
 ## Key Risk Areas
 
