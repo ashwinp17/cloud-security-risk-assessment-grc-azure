@@ -42,9 +42,9 @@ The project involved identifying cloud security risks, evaluating their likeliho
 
 | Asset | Threat | Vulnerability | Likelihood | Impact | Risk Score | Recommended Control | Framework |
 |---|---|---|---|---|---|---|---|
-| Local Administrator Account | Credential compromise | No multifactor authentication | 3 | 5 | 15 | Enforce MFA | NIST CSF PR.AC |
+| Privileged Local Administrator Account | Credential compromise | Multifactor authentication not enabled | 3 | 5 | 15/25 | Enforce MFA for administrative access | NIST CSF 2.0 PR.AA-03 |
 
-**Reasoning:** Likelihood was scored moderate (3/5) since the account is not directly internet-facing, but impact was scored maximum (5/5) because compromise of this account grants full administrative control over the VM. This risk scored higher than several more "obviously exposed" findings, illustrating that impact severity can outweigh raw exposure likelihood when prioritizing remediation.
+**Reasoning:** Likelihood was scored moderate (3/5) because account compromise would require an attacker to obtain or successfully guess valid administrative credentials, although publicly exposed RDP increases the opportunity for credential-based attacks. Impact was scored maximum (5/5) because compromise of the local administrator account would provide full control over the virtual machine. The resulting score of 15/25 demonstrates how high potential impact can elevate remediation priority even when likelihood is not rated at the maximum level.
 
 ## Key Risk Areas
 
